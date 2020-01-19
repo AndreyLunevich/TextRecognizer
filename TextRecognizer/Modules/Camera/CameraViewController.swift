@@ -11,4 +11,8 @@ final class CameraViewController: UIViewController {
 
         presenter?.setup(from: self, on: cameraView)
     }
+
+    @IBAction func btnTakeImagePressed(_ sender: Any) {
+        presenter?.takeImage(from: self)
+    }
 }

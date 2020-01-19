@@ -55,10 +55,11 @@ final class CameraManager: NSObject {
     }
 
     func start(on view: UIView) throws {
-        guard videoDeviceInput == nil else { throw CameraError.notSetup }
+        guard videoDeviceInput != nil else { throw CameraError.notSetup }
 
         let previewLayer = AVCaptureVideoPreviewLayer(session: self.session)
         previewLayer.frame = view.bounds
+        previewLayer.videoGravity = .resizeAspectFill
 
         view.layer.addSublayer(previewLayer)
 
@@ -71,8 +72,12 @@ final class CameraManager: NSObject {
         session.stopRunning()
     }
 
-    func captureImage(_ handler: @escaping CaptureHandler) throws {
-        guard let deviceInput = videoDeviceInput else { throw CameraError.notSetup }
+    func captureImage(_ handler: @escaping CaptureHandler) {
+        guard let deviceInput = videoDeviceInput else {
+            handler(.failure(.notSetup))
+
+            return
+        }
 
         self.captureHandler = handler
 

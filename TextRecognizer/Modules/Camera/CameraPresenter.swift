@@ -30,4 +30,18 @@ final class CameraPresenter {
             }
         }
     }
+
+    func takeImage(from controller: UIViewController) {
+        cameraManager.captureImage { [weak self] result in
+            guard let self = self else { return }
+
+            switch result {
+            case .success(let image):
+                print("process image")
+
+            case .failure(let error):
+                self.router.presentInfoAlert(from: controller, title: "", message: error.localizedDescription)
+            }
+        }
+    }
 }
