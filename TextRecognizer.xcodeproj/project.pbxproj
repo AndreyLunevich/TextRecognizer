@@ -27,7 +27,7 @@
 		D898FCE123D4F188006E1028 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FCE023D4F188006E1028 /* UIImage+Extension.swift */; };
 		D898FCE423D4FBC4006E1028 /* Recognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FCE323D4FBC4006E1028 /* Recognition.swift */; };
 		D898FCE623D4FC59006E1028 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FCE523D4FC59006E1028 /* Database.swift */; };
-		D898FCEA23D4FCA0006E1028 /* RecognitionStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FCE923D4FCA0006E1028 /* RecognitionStorage.swift */; };
+		D898FCEA23D4FCA0006E1028 /* RecognitionDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FCE923D4FCA0006E1028 /* RecognitionDatabase.swift */; };
 		D898FCEE23D4FDAC006E1028 /* RecognitionWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FCED23D4FDAC006E1028 /* RecognitionWorker.swift */; };
 		D898FCF323D5062C006E1028 /* PathBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FCF223D5062B006E1028 /* PathBuilder.swift */; };
 		D898FCF523D5088B006E1028 /* HistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FCF423D5088B006E1028 /* HistoryPresenter.swift */; };
@@ -37,6 +37,7 @@
 		D898FCFE23D50E33006E1028 /* FlatItemsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FCFD23D50E33006E1028 /* FlatItemsPresenter.swift */; };
 		D898FD0023D511DE006E1028 /* ImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FCFF23D511DE006E1028 /* ImageStorage.swift */; };
 		D898FD0223D5123A006E1028 /* DiskImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FD0123D5123A006E1028 /* DiskImageStorage.swift */; };
+		D898FD0423D5179B006E1028 /* HistoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FD0323D5179B006E1028 /* HistoryRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +78,7 @@
 		D898FCE023D4F188006E1028 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		D898FCE323D4FBC4006E1028 /* Recognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recognition.swift; sourceTree = "<group>"; };
 		D898FCE523D4FC59006E1028 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
-		D898FCE923D4FCA0006E1028 /* RecognitionStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognitionStorage.swift; sourceTree = "<group>"; };
+		D898FCE923D4FCA0006E1028 /* RecognitionDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognitionDatabase.swift; sourceTree = "<group>"; };
 		D898FCED23D4FDAC006E1028 /* RecognitionWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognitionWorker.swift; sourceTree = "<group>"; };
 		D898FCF223D5062B006E1028 /* PathBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathBuilder.swift; sourceTree = "<group>"; };
 		D898FCF423D5088B006E1028 /* HistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPresenter.swift; sourceTree = "<group>"; };
@@ -87,6 +88,7 @@
 		D898FCFD23D50E33006E1028 /* FlatItemsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatItemsPresenter.swift; sourceTree = "<group>"; };
 		D898FCFF23D511DE006E1028 /* ImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStorage.swift; sourceTree = "<group>"; };
 		D898FD0123D5123A006E1028 /* DiskImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskImageStorage.swift; sourceTree = "<group>"; };
+		D898FD0323D5179B006E1028 /* HistoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRouter.swift; sourceTree = "<group>"; };
 		DF5166ED031CA48B73911746 /* Pods-TextRecognizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextRecognizer.release.xcconfig"; path = "Target Support Files/Pods-TextRecognizer/Pods-TextRecognizer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -210,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				D898FCF423D5088B006E1028 /* HistoryPresenter.swift */,
+				D898FD0323D5179B006E1028 /* HistoryRouter.swift */,
 				D84DFF7023D4D18300EBCAA5 /* HistoryViewController.swift */,
 				D84DFF7123D4D18300EBCAA5 /* HistoryViewController.xib */,
 				D898FCF623D50D25006E1028 /* Views */,
@@ -243,7 +246,7 @@
 				D898FCE523D4FC59006E1028 /* Database.swift */,
 				D898FD0123D5123A006E1028 /* DiskImageStorage.swift */,
 				D898FCFF23D511DE006E1028 /* ImageStorage.swift */,
-				D898FCE923D4FCA0006E1028 /* RecognitionStorage.swift */,
+				D898FCE923D4FCA0006E1028 /* RecognitionDatabase.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -458,7 +461,7 @@
 				D898FCE423D4FBC4006E1028 /* Recognition.swift in Sources */,
 				D898FD0223D5123A006E1028 /* DiskImageStorage.swift in Sources */,
 				D898FCF523D5088B006E1028 /* HistoryPresenter.swift in Sources */,
-				D898FCEA23D4FCA0006E1028 /* RecognitionStorage.swift in Sources */,
+				D898FCEA23D4FCA0006E1028 /* RecognitionDatabase.swift in Sources */,
 				D898FCFC23D50DCD006E1028 /* CollectionCell.swift in Sources */,
 				D898FD0023D511DE006E1028 /* ImageStorage.swift in Sources */,
 				D84DFF6C23D4D15100EBCAA5 /* CameraManager.swift in Sources */,
@@ -474,6 +477,7 @@
 				D898FCF323D5062C006E1028 /* PathBuilder.swift in Sources */,
 				D898FCDA23D4ECC5006E1028 /* UIView+Designable.swift in Sources */,
 				D898FCE123D4F188006E1028 /* UIImage+Extension.swift in Sources */,
+				D898FD0423D5179B006E1028 /* HistoryRouter.swift in Sources */,
 				D898FCEE23D4FDAC006E1028 /* RecognitionWorker.swift in Sources */,
 				D84DFF7B23D4DCC000EBCAA5 /* CameraRouter.swift in Sources */,
 			);

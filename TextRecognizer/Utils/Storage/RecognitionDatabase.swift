@@ -1,6 +1,6 @@
 import SQLite
 
-final class RecognitionStorage: Database {
+final class RecognitionDatabase: Database {
 
     typealias Entity = Recognition
 

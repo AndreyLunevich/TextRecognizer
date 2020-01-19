@@ -64,11 +64,14 @@ final class CameraPresenter {
                 self.ocrManager.recognize(cropped) { [weak self] text in
                     self?.display?(.captureEnabled)
 
-                    do {
-                        try self?.worker.save(image: cropped, text: text)
-                    } catch {
-                        print(error.localizedDescription)
-//                        self?.router.presentInfoAlert(from: controller, title: "", message: error.localizedDescription)
+                    self?.worker.save(image: cropped, text: text) { [weak self] result in
+                        switch result {
+                        case .success:
+                            break
+
+                        case .failure(let error):
+                            self?.router.presentInfoAlert(from: controller, title: "", message: error.localizedDescription)
+                        }
                     }
                 }
 

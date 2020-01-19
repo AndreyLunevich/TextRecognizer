@@ -17,21 +17,26 @@ final class HistoryPresenter: FlatItemsPresenter {
 
     private(set) var items: [Item] = []
 
+    private let router: HistoryRouter
     private let worker: RecognitionWorker
 
-    init(worker: RecognitionWorker = RecognitionWorker()) {
+    init(router: HistoryRouter = HistoryRouterImpl(),
+         worker: RecognitionWorker = RecognitionWorker()) {
+        self.router = router
         self.worker = worker
     }
 
     func setup(from controller: UIViewController) {
-        do {
-            items = try worker
-                .findAll()
-                .map { Item(recognition: $0)}
+        worker.findAll { [weak self] result in
+            switch result {
+            case .success(let entities):
+                self?.items = entities.map { Item(recognition: $0)}
 
-            display?()
-        } catch {
-            // TODO show user friendly error
+                self?.display?()
+
+            case .failure(let error):
+                self?.router.presentInfoAlert(from: controller, title: "", message: error.localizedDescription)
+            }
         }
     }
 }
