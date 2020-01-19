@@ -2,12 +2,16 @@ PODS:
   - GPUImage (0.1.7)
   - Nimble (8.0.5)
   - Quick (2.2.0)
+  - SQLite.swift (0.12.2):
+    - SQLite.swift/standard (= 0.12.2)
+  - SQLite.swift/standard (0.12.2)
   - SwiftOCR (1.1):
     - GPUImage
 
 DEPENDENCIES:
   - Nimble (~> 8.0)
   - Quick (~> 2.0)
+  - SQLite.swift
   - SwiftOCR (from `https://github.com/AndreyLunevich/SwiftOCR.git`)
 
 SPEC REPOS:
@@ -15,6 +19,7 @@ SPEC REPOS:
     - GPUImage
     - Nimble
     - Quick
+    - SQLite.swift
 
 EXTERNAL SOURCES:
   SwiftOCR:
@@ -29,8 +34,9 @@ SPEC CHECKSUMS:
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   Nimble: 4ab1aeb9b45553c75b9687196b0fa0713170a332
   Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
+  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   SwiftOCR: 99f0b08c90b39e8e58761fa3a92eb521efcfe5aa
 
-PODFILE CHECKSUM: fad3ab6ab8810a4fe442fc9510424af316550ff4
+PODFILE CHECKSUM: d8919d46534187bde0a322157c88eaaa26485e67
 
 COCOAPODS: 1.8.4

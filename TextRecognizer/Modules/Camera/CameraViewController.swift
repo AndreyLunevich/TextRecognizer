@@ -12,6 +12,8 @@ final class CameraViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupBarItems()
+
         presenter?.display = { [weak self] state in
             DispatchQueue.main.async {
                 self?.progressView.isHidden = true
@@ -34,5 +36,15 @@ final class CameraViewController: UIViewController {
 
     @IBAction func btnTakeImagePressed(_ sender: Any) {
         presenter?.takeImage(from: self, area: viewFinder.frame)
+    }
+
+    @objc private func historyPressed() {
+        presenter?.showHistory(from: self)
+    }
+
+    private func setupBarItems() {
+        let history = UIBarButtonItem(title: "HISTORY", style: .plain, target: self, action: #selector(historyPressed))
+
+        navigationItem.rightBarButtonItems = [history]
     }
 }

@@ -13,13 +13,16 @@ final class CameraPresenter {
     private let router: CameraRouter
     private let cameraManager: CameraManager
     private let ocrManager: OCRManager
+    private let worker: RecognitionWorker
 
     init(router: CameraRouter = CameraRouterImpl(),
          cameraManager: CameraManager = CameraManager(),
-         ocrManager: OCRManager = SwiftOCRManager()) {
+         ocrManager: OCRManager = SwiftOCRManager(),
+         worker: RecognitionWorker = RecognitionWorker()) {
         self.router = router
         self.cameraManager = cameraManager
         self.ocrManager = ocrManager
+        self.worker = worker
     }
 
     func setup(from controller: UIViewController, on view: UIView) {
@@ -61,12 +64,21 @@ final class CameraPresenter {
                 self.ocrManager.recognize(cropped) { [weak self] text in
                     self?.display?(.captureEnabled)
 
-                    print("get text => \(text)")
+                    do {
+                        try self?.worker.save(image: cropped, text: text)
+                    } catch {
+                        print(error.localizedDescription)
+//                        self?.router.presentInfoAlert(from: controller, title: "", message: error.localizedDescription)
+                    }
                 }
 
             case .failure(let error):
                 self.router.presentInfoAlert(from: controller, title: "", message: error.localizedDescription)
             }
         }
+    }
+
+    func showHistory(from controller: UIViewController) {
+        router.showHistory(from: controller)
     }
 }

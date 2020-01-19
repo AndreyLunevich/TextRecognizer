@@ -25,6 +25,18 @@
 		D898FCD823D4EA3C006E1028 /* SwiftOCRManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FCD723D4EA3C006E1028 /* SwiftOCRManager.swift */; };
 		D898FCDA23D4ECC5006E1028 /* UIView+Designable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FCD923D4ECC5006E1028 /* UIView+Designable.swift */; };
 		D898FCE123D4F188006E1028 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FCE023D4F188006E1028 /* UIImage+Extension.swift */; };
+		D898FCE423D4FBC4006E1028 /* Recognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FCE323D4FBC4006E1028 /* Recognition.swift */; };
+		D898FCE623D4FC59006E1028 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FCE523D4FC59006E1028 /* Database.swift */; };
+		D898FCEA23D4FCA0006E1028 /* RecognitionStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FCE923D4FCA0006E1028 /* RecognitionStorage.swift */; };
+		D898FCEE23D4FDAC006E1028 /* RecognitionWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FCED23D4FDAC006E1028 /* RecognitionWorker.swift */; };
+		D898FCF323D5062C006E1028 /* PathBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FCF223D5062B006E1028 /* PathBuilder.swift */; };
+		D898FCF523D5088B006E1028 /* HistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FCF423D5088B006E1028 /* HistoryPresenter.swift */; };
+		D898FCF923D50D3B006E1028 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FCF723D50D3B006E1028 /* HistoryCell.swift */; };
+		D898FCFA23D50D3B006E1028 /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D898FCF823D50D3B006E1028 /* HistoryCell.xib */; };
+		D898FCFC23D50DCD006E1028 /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FCFB23D50DCD006E1028 /* CollectionCell.swift */; };
+		D898FCFE23D50E33006E1028 /* FlatItemsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FCFD23D50E33006E1028 /* FlatItemsPresenter.swift */; };
+		D898FD0023D511DE006E1028 /* ImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FCFF23D511DE006E1028 /* ImageStorage.swift */; };
+		D898FD0223D5123A006E1028 /* DiskImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FD0123D5123A006E1028 /* DiskImageStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +75,18 @@
 		D898FCD723D4EA3C006E1028 /* SwiftOCRManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftOCRManager.swift; sourceTree = "<group>"; };
 		D898FCD923D4ECC5006E1028 /* UIView+Designable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Designable.swift"; sourceTree = "<group>"; };
 		D898FCE023D4F188006E1028 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		D898FCE323D4FBC4006E1028 /* Recognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recognition.swift; sourceTree = "<group>"; };
+		D898FCE523D4FC59006E1028 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		D898FCE923D4FCA0006E1028 /* RecognitionStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognitionStorage.swift; sourceTree = "<group>"; };
+		D898FCED23D4FDAC006E1028 /* RecognitionWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognitionWorker.swift; sourceTree = "<group>"; };
+		D898FCF223D5062B006E1028 /* PathBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathBuilder.swift; sourceTree = "<group>"; };
+		D898FCF423D5088B006E1028 /* HistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPresenter.swift; sourceTree = "<group>"; };
+		D898FCF723D50D3B006E1028 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
+		D898FCF823D50D3B006E1028 /* HistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
+		D898FCFB23D50DCD006E1028 /* CollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
+		D898FCFD23D50E33006E1028 /* FlatItemsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatItemsPresenter.swift; sourceTree = "<group>"; };
+		D898FCFF23D511DE006E1028 /* ImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStorage.swift; sourceTree = "<group>"; };
+		D898FD0123D5123A006E1028 /* DiskImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskImageStorage.swift; sourceTree = "<group>"; };
 		DF5166ED031CA48B73911746 /* Pods-TextRecognizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextRecognizer.release.xcconfig"; path = "Target Support Files/Pods-TextRecognizer/Pods-TextRecognizer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +155,7 @@
 			children = (
 				D8186E3F23D49EE600D559A9 /* Info.plist */,
 				D8186E3123D49EE200D559A9 /* AppDelegate.swift */,
+				D898FCE223D4FBB1006E1028 /* Models */,
 				D84DFF6D23D4D15F00EBCAA5 /* Modules */,
 				D84DFF6A23D4D14800EBCAA5 /* Utils */,
 				D8186E3A23D49EE600D559A9 /* Assets.xcassets */,
@@ -152,8 +177,10 @@
 			isa = PBXGroup;
 			children = (
 				D84DFF6B23D4D15100EBCAA5 /* CameraManager.swift */,
-				D898FCD523D4E9C7006E1028 /* OCRManager.swift */,
-				D898FCD723D4EA3C006E1028 /* SwiftOCRManager.swift */,
+				D898FCF223D5062B006E1028 /* PathBuilder.swift */,
+				D898FCED23D4FDAC006E1028 /* RecognitionWorker.swift */,
+				D898FCF123D5017B006E1028 /* Manager */,
+				D898FCF023D4FDDB006E1028 /* Storage */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -182,8 +209,10 @@
 		D84DFF6F23D4D17300EBCAA5 /* History */ = {
 			isa = PBXGroup;
 			children = (
+				D898FCF423D5088B006E1028 /* HistoryPresenter.swift */,
 				D84DFF7023D4D18300EBCAA5 /* HistoryViewController.swift */,
 				D84DFF7123D4D18300EBCAA5 /* HistoryViewController.xib */,
+				D898FCF623D50D25006E1028 /* Views */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -192,10 +221,49 @@
 			isa = PBXGroup;
 			children = (
 				D84DFF7D23D4DCDD00EBCAA5 /* AlertRouter.swift */,
+				D898FCFB23D50DCD006E1028 /* CollectionCell.swift */,
+				D898FCFD23D50E33006E1028 /* FlatItemsPresenter.swift */,
 				D898FCE023D4F188006E1028 /* UIImage+Extension.swift */,
 				D898FCD923D4ECC5006E1028 /* UIView+Designable.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		D898FCE223D4FBB1006E1028 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D898FCE323D4FBC4006E1028 /* Recognition.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D898FCF023D4FDDB006E1028 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				D898FCE523D4FC59006E1028 /* Database.swift */,
+				D898FD0123D5123A006E1028 /* DiskImageStorage.swift */,
+				D898FCFF23D511DE006E1028 /* ImageStorage.swift */,
+				D898FCE923D4FCA0006E1028 /* RecognitionStorage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		D898FCF123D5017B006E1028 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				D898FCD523D4E9C7006E1028 /* OCRManager.swift */,
+				D898FCD723D4EA3C006E1028 /* SwiftOCRManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		D898FCF623D50D25006E1028 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D898FCF723D50D3B006E1028 /* HistoryCell.swift */,
+				D898FCF823D50D3B006E1028 /* HistoryCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D898FCFA23D50D3B006E1028 /* HistoryCell.xib in Resources */,
 				D8186E3E23D49EE600D559A9 /* LaunchScreen.storyboard in Resources */,
 				D8186E3B23D49EE600D559A9 /* Assets.xcassets in Resources */,
 				D84DFF7323D4D18300EBCAA5 /* HistoryViewController.xib in Resources */,
@@ -386,15 +455,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				D84DFF7623D4D19800EBCAA5 /* CameraViewController.swift in Sources */,
+				D898FCE423D4FBC4006E1028 /* Recognition.swift in Sources */,
+				D898FD0223D5123A006E1028 /* DiskImageStorage.swift in Sources */,
+				D898FCF523D5088B006E1028 /* HistoryPresenter.swift in Sources */,
+				D898FCEA23D4FCA0006E1028 /* RecognitionStorage.swift in Sources */,
+				D898FCFC23D50DCD006E1028 /* CollectionCell.swift in Sources */,
+				D898FD0023D511DE006E1028 /* ImageStorage.swift in Sources */,
 				D84DFF6C23D4D15100EBCAA5 /* CameraManager.swift in Sources */,
 				D898FCD823D4EA3C006E1028 /* SwiftOCRManager.swift in Sources */,
+				D898FCE623D4FC59006E1028 /* Database.swift in Sources */,
+				D898FCFE23D50E33006E1028 /* FlatItemsPresenter.swift in Sources */,
 				D898FCD623D4E9C7006E1028 /* OCRManager.swift in Sources */,
 				D8186E3223D49EE200D559A9 /* AppDelegate.swift in Sources */,
 				D84DFF7923D4DC1F00EBCAA5 /* CameraPresenter.swift in Sources */,
 				D84DFF7223D4D18300EBCAA5 /* HistoryViewController.swift in Sources */,
 				D84DFF7E23D4DCDD00EBCAA5 /* AlertRouter.swift in Sources */,
+				D898FCF923D50D3B006E1028 /* HistoryCell.swift in Sources */,
+				D898FCF323D5062C006E1028 /* PathBuilder.swift in Sources */,
 				D898FCDA23D4ECC5006E1028 /* UIView+Designable.swift in Sources */,
 				D898FCE123D4F188006E1028 /* UIImage+Extension.swift in Sources */,
+				D898FCEE23D4FDAC006E1028 /* RecognitionWorker.swift in Sources */,
 				D84DFF7B23D4DCC000EBCAA5 /* CameraRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

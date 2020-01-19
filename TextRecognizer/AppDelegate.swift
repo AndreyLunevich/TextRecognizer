@@ -10,8 +10,10 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         let camera = CameraViewController()
         camera.presenter = CameraPresenter()
 
+        let navi = UINavigationController(rootViewController: camera)
+
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = camera
+        window?.rootViewController = navi
         window?.makeKeyAndVisible()
 
         return true
