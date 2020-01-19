@@ -21,6 +21,10 @@
 		D84DFF7923D4DC1F00EBCAA5 /* CameraPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84DFF7823D4DC1F00EBCAA5 /* CameraPresenter.swift */; };
 		D84DFF7B23D4DCC000EBCAA5 /* CameraRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84DFF7A23D4DCC000EBCAA5 /* CameraRouter.swift */; };
 		D84DFF7E23D4DCDD00EBCAA5 /* AlertRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84DFF7D23D4DCDD00EBCAA5 /* AlertRouter.swift */; };
+		D898FCD623D4E9C7006E1028 /* OCRManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FCD523D4E9C7006E1028 /* OCRManager.swift */; };
+		D898FCD823D4EA3C006E1028 /* SwiftOCRManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FCD723D4EA3C006E1028 /* SwiftOCRManager.swift */; };
+		D898FCDA23D4ECC5006E1028 /* UIView+Designable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FCD923D4ECC5006E1028 /* UIView+Designable.swift */; };
+		D898FCE123D4F188006E1028 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FCE023D4F188006E1028 /* UIImage+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		D84DFF7823D4DC1F00EBCAA5 /* CameraPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPresenter.swift; sourceTree = "<group>"; };
 		D84DFF7A23D4DCC000EBCAA5 /* CameraRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRouter.swift; sourceTree = "<group>"; };
 		D84DFF7D23D4DCDD00EBCAA5 /* AlertRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertRouter.swift; sourceTree = "<group>"; };
+		D898FCD523D4E9C7006E1028 /* OCRManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRManager.swift; sourceTree = "<group>"; };
+		D898FCD723D4EA3C006E1028 /* SwiftOCRManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftOCRManager.swift; sourceTree = "<group>"; };
+		D898FCD923D4ECC5006E1028 /* UIView+Designable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Designable.swift"; sourceTree = "<group>"; };
+		D898FCE023D4F188006E1028 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		DF5166ED031CA48B73911746 /* Pods-TextRecognizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextRecognizer.release.xcconfig"; path = "Target Support Files/Pods-TextRecognizer/Pods-TextRecognizer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				D84DFF6B23D4D15100EBCAA5 /* CameraManager.swift */,
+				D898FCD523D4E9C7006E1028 /* OCRManager.swift */,
+				D898FCD723D4EA3C006E1028 /* SwiftOCRManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -182,6 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				D84DFF7D23D4DCDD00EBCAA5 /* AlertRouter.swift */,
+				D898FCE023D4F188006E1028 /* UIImage+Extension.swift */,
+				D898FCD923D4ECC5006E1028 /* UIView+Designable.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -197,6 +209,7 @@
 				D8186E2A23D49EE200D559A9 /* Sources */,
 				D8186E2B23D49EE200D559A9 /* Frameworks */,
 				D8186E2C23D49EE200D559A9 /* Resources */,
+				D69A5CF31AE32209193D4086 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -348,6 +361,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D69A5CF31AE32209193D4086 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TextRecognizer/Pods-TextRecognizer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TextRecognizer/Pods-TextRecognizer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TextRecognizer/Pods-TextRecognizer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -357,10 +387,14 @@
 			files = (
 				D84DFF7623D4D19800EBCAA5 /* CameraViewController.swift in Sources */,
 				D84DFF6C23D4D15100EBCAA5 /* CameraManager.swift in Sources */,
+				D898FCD823D4EA3C006E1028 /* SwiftOCRManager.swift in Sources */,
+				D898FCD623D4E9C7006E1028 /* OCRManager.swift in Sources */,
 				D8186E3223D49EE200D559A9 /* AppDelegate.swift in Sources */,
 				D84DFF7923D4DC1F00EBCAA5 /* CameraPresenter.swift in Sources */,
 				D84DFF7223D4D18300EBCAA5 /* HistoryViewController.swift in Sources */,
 				D84DFF7E23D4DCDD00EBCAA5 /* AlertRouter.swift in Sources */,
+				D898FCDA23D4ECC5006E1028 /* UIView+Designable.swift in Sources */,
+				D898FCE123D4F188006E1028 /* UIImage+Extension.swift in Sources */,
 				D84DFF7B23D4DCC000EBCAA5 /* CameraRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,7 +585,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ACBB9A25E943EDE32D2CB9D2 /* Pods-TextRecognizerTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TextRecognizerTests/Info.plist;
@@ -573,7 +606,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3E22793BA47D5B961DA550F3 /* Pods-TextRecognizerTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TextRecognizerTests/Info.plist;

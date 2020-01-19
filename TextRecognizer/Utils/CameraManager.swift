@@ -26,9 +26,10 @@ final class CameraManager: NSObject {
 
     private let session = AVCaptureSession()
     private let photoOutput = AVCapturePhotoOutput()
+    private let sessionQueue = DispatchQueue(label: "session queue")
 
     private var previewLayer: AVCaptureVideoPreviewLayer?
-    private var videoDeviceInput: AVCaptureDeviceInput?
+    private var captureDevice: AVCaptureDevice?
 
     private var captureHandler: CaptureHandler?
 
@@ -39,7 +40,7 @@ final class CameraManager: NSObject {
             switch result {
             case .success:
                 do {
-                    self.videoDeviceInput = try self.configureSession(self.session, photoOutput: self.photoOutput)
+                    self.captureDevice = try self.configureSession(self.session, photoOutput: self.photoOutput)
 
                     completion(.success(()))
                 } catch let error as CameraError {
@@ -55,7 +56,7 @@ final class CameraManager: NSObject {
     }
 
     func start(on view: UIView) throws {
-        guard videoDeviceInput != nil else { throw CameraError.notSetup }
+        guard captureDevice != nil else { throw CameraError.notSetup }
 
         let previewLayer = AVCaptureVideoPreviewLayer(session: self.session)
         previewLayer.frame = view.bounds
@@ -73,7 +74,7 @@ final class CameraManager: NSObject {
     }
 
     func captureImage(_ handler: @escaping CaptureHandler) {
-        guard let deviceInput = videoDeviceInput else {
+        guard let device = captureDevice else {
             handler(.failure(.notSetup))
 
             return
@@ -83,7 +84,7 @@ final class CameraManager: NSObject {
 
         let photoSettings = AVCapturePhotoSettings()
         photoSettings.isHighResolutionPhotoEnabled = true
-        if deviceInput.device.isFlashAvailable {
+        if device.isFlashAvailable {
             photoSettings.flashMode = .auto
         }
 
@@ -116,18 +117,18 @@ final class CameraManager: NSObject {
         }
     }
 
-    private func configureSession(_ session: AVCaptureSession, photoOutput: AVCapturePhotoOutput) throws -> AVCaptureDeviceInput {
+    private func configureSession(_ session: AVCaptureSession, photoOutput: AVCapturePhotoOutput) throws -> AVCaptureDevice {
         session.beginConfiguration()
         session.sessionPreset = AVCaptureSession.Preset.photo
 
         do {
-            let deviceInput = try self.deviceInput(for: session)
+            let captureDevice = try self.captureDevice(for: session)
 
             try configurePhotoOutput(photoOutput, for: session)
 
             session.commitConfiguration()
 
-            return deviceInput
+            return captureDevice
         } catch {
             session.commitConfiguration()
 
@@ -135,7 +136,7 @@ final class CameraManager: NSObject {
         }
     }
 
-    private func deviceInput(for session: AVCaptureSession, mediaType: AVMediaType = .video) throws -> AVCaptureDeviceInput {
+    private func captureDevice(for session: AVCaptureSession, mediaType: AVMediaType = .video) throws -> AVCaptureDevice {
         var captureDevice: AVCaptureDevice?
 
         if let dualCameraDevice = AVCaptureDevice.default(.builtInDualCamera, for: mediaType, position: .back) {
@@ -153,7 +154,18 @@ final class CameraManager: NSObject {
         if session.canAddInput(deviceInput) {
             session.addInput(deviceInput)
 
-            return deviceInput
+            try device.lockForConfiguration()
+
+            device.focusMode = .continuousAutoFocus
+
+            let zoomScale: CGFloat = 2.5
+            if zoomScale <= device.activeFormat.videoMaxZoomFactor {
+                device.videoZoomFactor = zoomScale
+            }
+
+            device.unlockForConfiguration()
+
+            return device
         } else {
             throw CameraError.configurationFailed
         }

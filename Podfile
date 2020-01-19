@@ -4,7 +4,7 @@ inhibit_all_warnings!
 target 'TextRecognizer' do
   platform :ios, '12.0'
 
-#  pod 'SwiftOCR'
+  pod 'SwiftOCR', :git => 'https://github.com/AndreyLunevich/SwiftOCR.git'
 
   target 'TextRecognizerTests' do
       inherit! :search_paths

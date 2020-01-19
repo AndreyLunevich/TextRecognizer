@@ -1,20 +1,36 @@
 PODS:
+  - GPUImage (0.1.7)
   - Nimble (8.0.5)
   - Quick (2.2.0)
+  - SwiftOCR (1.1):
+    - GPUImage
 
 DEPENDENCIES:
   - Nimble (~> 8.0)
   - Quick (~> 2.0)
+  - SwiftOCR (from `https://github.com/AndreyLunevich/SwiftOCR.git`)
 
 SPEC REPOS:
   trunk:
+    - GPUImage
     - Nimble
     - Quick
 
+EXTERNAL SOURCES:
+  SwiftOCR:
+    :git: https://github.com/AndreyLunevich/SwiftOCR.git
+
+CHECKOUT OPTIONS:
+  SwiftOCR:
+    :commit: b81475b2b34adac8ce2ced4aeb03c26e6dc745ee
+    :git: https://github.com/AndreyLunevich/SwiftOCR.git
+
 SPEC CHECKSUMS:
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   Nimble: 4ab1aeb9b45553c75b9687196b0fa0713170a332
   Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
+  SwiftOCR: 99f0b08c90b39e8e58761fa3a92eb521efcfe5aa
 
-PODFILE CHECKSUM: f34d9ff3be0ddd94876ac1c615c3b73ab50bef5f
+PODFILE CHECKSUM: fad3ab6ab8810a4fe442fc9510424af316550ff4
 
 COCOAPODS: 1.8.4
