@@ -1,6 +1,6 @@
 import UIKit
 
-final class RecognitionWorker {
+class RecognitionWorker {
 
     private static let database = PathBuilder.database(named: "TextRecognizer").absoluteString
 

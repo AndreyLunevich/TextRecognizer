@@ -5,7 +5,7 @@ protocol CameraRouter: AlertRouter {
     func showHistory(from controller: UIViewController)
 }
 
-extension CameraRouter {
+final class CameraRouterImpl: CameraRouter {
 
     func showHistory(from controller: UIViewController) {
         let history = HistoryViewController()
@@ -14,5 +14,3 @@ extension CameraRouter {
         controller.navigationController?.pushViewController(history, animated: true)
     }
 }
-
-final class CameraRouterImpl: CameraRouter {  }

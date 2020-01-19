@@ -12,7 +12,6 @@
 		D8186E3223D49EE200D559A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8186E3123D49EE200D559A9 /* AppDelegate.swift */; };
 		D8186E3B23D49EE600D559A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8186E3A23D49EE600D559A9 /* Assets.xcassets */; };
 		D8186E3E23D49EE600D559A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8186E3C23D49EE600D559A9 /* LaunchScreen.storyboard */; };
-		D8186E4923D49EE600D559A9 /* TextRecognizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8186E4823D49EE600D559A9 /* TextRecognizerTests.swift */; };
 		D84DFF6C23D4D15100EBCAA5 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84DFF6B23D4D15100EBCAA5 /* CameraManager.swift */; };
 		D84DFF7223D4D18300EBCAA5 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84DFF7023D4D18300EBCAA5 /* HistoryViewController.swift */; };
 		D84DFF7323D4D18300EBCAA5 /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D84DFF7123D4D18300EBCAA5 /* HistoryViewController.xib */; };
@@ -38,6 +37,8 @@
 		D898FD0023D511DE006E1028 /* ImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FCFF23D511DE006E1028 /* ImageStorage.swift */; };
 		D898FD0223D5123A006E1028 /* DiskImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FD0123D5123A006E1028 /* DiskImageStorage.swift */; };
 		D898FD0423D5179B006E1028 /* HistoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FD0323D5179B006E1028 /* HistoryRouter.swift */; };
+		D898FD0623D5195B006E1028 /* DiskImageStorageSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FD0523D5195B006E1028 /* DiskImageStorageSpec.swift */; };
+		D898FD0C23D51D8D006E1028 /* HistoryPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898FD0B23D51D8D006E1028 /* HistoryPresenterSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +63,6 @@
 		D8186E3D23D49EE600D559A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8186E3F23D49EE600D559A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8186E4423D49EE600D559A9 /* TextRecognizerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextRecognizerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D8186E4823D49EE600D559A9 /* TextRecognizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognizerTests.swift; sourceTree = "<group>"; };
 		D8186E4A23D49EE600D559A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D84DFF6B23D4D15100EBCAA5 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		D84DFF7023D4D18300EBCAA5 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +89,8 @@
 		D898FCFF23D511DE006E1028 /* ImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStorage.swift; sourceTree = "<group>"; };
 		D898FD0123D5123A006E1028 /* DiskImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskImageStorage.swift; sourceTree = "<group>"; };
 		D898FD0323D5179B006E1028 /* HistoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRouter.swift; sourceTree = "<group>"; };
+		D898FD0523D5195B006E1028 /* DiskImageStorageSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskImageStorageSpec.swift; sourceTree = "<group>"; };
+		D898FD0B23D51D8D006E1028 /* HistoryPresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPresenterSpec.swift; sourceTree = "<group>"; };
 		DF5166ED031CA48B73911746 /* Pods-TextRecognizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextRecognizer.release.xcconfig"; path = "Target Support Files/Pods-TextRecognizer/Pods-TextRecognizer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,7 +171,6 @@
 		D8186E4723D49EE600D559A9 /* TextRecognizerTests */ = {
 			isa = PBXGroup;
 			children = (
-				D8186E4823D49EE600D559A9 /* TextRecognizerTests.swift */,
 				D8186E4A23D49EE600D559A9 /* Info.plist */,
 			);
 			path = TextRecognizerTests;
@@ -212,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				D898FCF423D5088B006E1028 /* HistoryPresenter.swift */,
+				D898FD0B23D51D8D006E1028 /* HistoryPresenterSpec.swift */,
 				D898FD0323D5179B006E1028 /* HistoryRouter.swift */,
 				D84DFF7023D4D18300EBCAA5 /* HistoryViewController.swift */,
 				D84DFF7123D4D18300EBCAA5 /* HistoryViewController.xib */,
@@ -245,6 +247,7 @@
 			children = (
 				D898FCE523D4FC59006E1028 /* Database.swift */,
 				D898FD0123D5123A006E1028 /* DiskImageStorage.swift */,
+				D898FD0523D5195B006E1028 /* DiskImageStorageSpec.swift */,
 				D898FCFF23D511DE006E1028 /* ImageStorage.swift */,
 				D898FCE923D4FCA0006E1028 /* RecognitionDatabase.swift */,
 			);
@@ -487,7 +490,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8186E4923D49EE600D559A9 /* TextRecognizerTests.swift in Sources */,
+				D898FD0C23D51D8D006E1028 /* HistoryPresenterSpec.swift in Sources */,
+				D898FD0623D5195B006E1028 /* DiskImageStorageSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

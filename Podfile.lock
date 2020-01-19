@@ -27,7 +27,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   SwiftOCR:
-    :commit: b81475b2b34adac8ce2ced4aeb03c26e6dc745ee
+    :commit: de9c079734d04398b53ec255701cedd6ae455d51
     :git: https://github.com/AndreyLunevich/SwiftOCR.git
 
 SPEC CHECKSUMS:
@@ -35,7 +35,7 @@ SPEC CHECKSUMS:
   Nimble: 4ab1aeb9b45553c75b9687196b0fa0713170a332
   Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
-  SwiftOCR: 99f0b08c90b39e8e58761fa3a92eb521efcfe5aa
+  SwiftOCR: 404417fffe7262cd82f3e1153ec87d646eb3893e
 
 PODFILE CHECKSUM: d8919d46534187bde0a322157c88eaaa26485e67
 
