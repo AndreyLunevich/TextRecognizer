@@ -157,11 +157,6 @@ final class CameraManager: NSObject {
 
             device.focusMode = .continuousAutoFocus
 
-            let zoomScale: CGFloat = 2.5
-            if zoomScale <= device.activeFormat.videoMaxZoomFactor {
-                device.videoZoomFactor = zoomScale
-            }
-
             device.unlockForConfiguration()
 
             return device

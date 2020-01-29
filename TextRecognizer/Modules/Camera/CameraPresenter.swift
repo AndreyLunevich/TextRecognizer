@@ -17,7 +17,7 @@ final class CameraPresenter {
 
     init(router: CameraRouter = CameraRouterImpl(),
          cameraManager: CameraManager = CameraManager(),
-         ocrManager: OCRManager = SwiftOCRManager(),
+         ocrManager: OCRManager = FirebaseOCRManager(),
          worker: RecognitionWorker = RecognitionWorker()) {
         self.router = router
         self.cameraManager = cameraManager
@@ -59,20 +59,28 @@ final class CameraPresenter {
             case .success(let image):
                 self.display?(.processingImage)
 
-                let cropped = image.crop(area: area)
+                if let normalized = image.fixedOrientation() {
+                    self.ocrManager.recognize(normalized) { [weak self] result in
+                        self?.display?(.captureEnabled)
 
-                self.ocrManager.recognize(cropped) { [weak self] text in
-                    self?.display?(.captureEnabled)
-
-                    self?.worker.save(image: cropped, text: text) { [weak self] result in
                         switch result {
-                        case .success:
-                            break
+                        case .success(let text):
+                            self?.worker.save(image: normalized, text: text) { [weak self] result in
+                                switch result {
+                                case .success:
+                                    break
+
+                                case .failure(let error):
+                                    self?.router.presentInfoAlert(from: controller, title: "", message: error.localizedDescription)
+                                }
+                            }
 
                         case .failure(let error):
                             self?.router.presentInfoAlert(from: controller, title: "", message: error.localizedDescription)
                         }
                     }
+                } else {
+                    self.router.presentInfoAlert(from: controller, title: "", message: "Captured image failed")
                 }
 
             case .failure(let error):
